@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$CONTENT_TITLE | Agenda">
+        Agenda
+    </title>
+    <!-- Optimización Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Lato + Poppins + Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&family=Montserrat:wght@100;300;400;500;600;700;900&display=swap"
+          rel="stylesheet">
+    <!-- Remix Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/global.css}">
+    <link rel="stylesheet" th:href="@{/css/ui/button.css}">
+    <link rel="stylesheet" th:href="@{/css/ui/validation.css}">
+    <link rel="stylesheet" th:href="@{/css/ui/form.css}">
+    <link rel="stylesheet" th:href="@{/css/components/navbar.css}">
+</head>
+<body>
+<div th:replace="components/navbar :: navbar"></div>
+<header>
+</header>
+<main layout:fragment="content">
+</main>
+<footer>
+    <div th:replace="components/footer :: footer"></div>
+</footer>
+</body>
+</html>

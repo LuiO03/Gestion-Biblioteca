@@ -1,91 +1,145 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/mainlayout}">
 <head>
-    <meta charset="UTF-8">
     <title>Formulario de Evento</title>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #205E97; /* Azul claro */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #fff; /* Texto en blanco para contraste */
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        form {
-            width: 70%;
-            max-width: 400px; /* Ajusta este valor según sea necesario */
-            text-align: left;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #2c3e50; /* Azul oscuro */
-            color: #fff;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #1a252f; /* Cambia el tono al hacer hover */
-        }
-    </style>
-
     <script>
-        $(function() {
+        $(function () {
             $("#fecha").datepicker({
                 dateFormat: 'dd-mm-yy'
             });
         });
     </script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/modules/module-list.css}">
+    <link rel="stylesheet" th:href="@{/css/ui/form.css}">
 </head>
 <body>
-<h2>Formulario de Evento</h2>
-<form th:action="@{/eventos/guardar}" method="post" th:object="${evento}">
-    <input type="hidden" th:field="*{id}" />
-    <label for="titulo">Título:</label>
-    <input type="text" id="titulo" name="titulo" th:field="*{titulo}" required><br>
+<main layout:fragment="content" class="page">
 
-    <label for="fecha">Fecha:</label>
-    <input type="text" id="fecha" name="fecha" th:field="*{fecha}" required><br>
+    <div class="page-header">
+        <div class="page-title">
+                <h2>Nuevo Evento</h2>
+                <p>Complete la información del evento.</p>
+        </div>
+        <a th:href="@{/eventos}" class="boton-secondary boton-accent">
+            <span class="boton-icon">
+                <i class="ri-arrow-go-back-line"></i>
+            </span>
+            <span class="boton-text">
+                Volver
+            </span>
+        </a>
+    </div>
+    <form th:action="@{/eventos/guardar}"
+            th:object="${evento}"
+            method="post"
+            class="form-container">
+        <input type="hidden" th:field="*{id}">
+        <div class="form-body">
+            <div class="form-row-fit">
+                <!-- Título -->
+                <div class="input-group">
+                    <label for="titulo" class="label-form">
+                        Título
+                        <i class="ri-asterisk text-accent"></i>
+                    </label>
+                    <div class="input-icon-container">
+                        <i class="ri-bookmark-line input-icon"></i>
+                        <input
+                                id="titulo"
+                                type="text"
+                                class="input-form"
+                                th:field="*{titulo}"
+                                placeholder="Ingrese el título">
+                    </div>
+                </div>
+                <!-- Fecha -->
+                <div class="input-group">
+                    <label for="fecha" class="label-form">
+                        Fecha
+                        <i class="ri-asterisk text-accent"></i>
+                    </label>
+                    <div class="input-icon-container">
+                        <i class="ri-calendar-line input-icon"></i>
+                        <input
+                                id="fecha"
+                                type="text"
+                                class="input-form"
+                                th:field="*{fecha}"
+                                placeholder="Seleccione una fecha">
+                    </div>
+                </div>
+            </div>
+            <div class="form-row-fit">
+                <!-- Hora -->
+                <div class="input-group">
+                    <label for="hora" class="label-form">
+                        Hora
+                        <i class="ri-asterisk text-accent"></i>
+                    </label>
+                    <div class="input-icon-container">
+                        <i class="ri-time-line input-icon"></i>
+                        <input
+                                id="hora"
+                                type="text"
+                                class="input-form"
+                                th:field="*{hora}"
+                                placeholder="HH:mm:ss">
+                    </div>
+                </div>
+            </div>
 
-    <label for="hora">Hora (HH:mm:ss):</label>
-    <input type="text" id="hora" name="hora" th:field="*{hora}" required pattern="(?:[01]\d|2[0123]):(?:[012345]\d):(?:[012345]\d)"><br>
+            <div class="input-group">
+                <label for="descripcion" class="label-form">
+                    Descripción
+                </label>
+                <div class="input-icon-container">
+                    <i class="ri-file-text-line input-icon"></i>
+                    <textarea
+                            id="descripcion"
+                            class="textarea-form"
+                            th:field="*{descripcion}"
+                            rows="5"
+                            placeholder="Descripción del evento"></textarea>
+                </div>
+            </div>
+        </div>
 
-    <label for="descripcion">Descripción:</label>
-    <textarea id="descripcion" name="descripcion" th:field="*{descripcion}"></textarea><br>
-
-    <input type="submit" value="Guardar">
-    <a th:href="@{/eventos}"><button type="button">Cancelar</button></a>
-</form>
-</form>
+        <div class="form-footer-static">
+            <a th:href="@{/eventos}" class="boton-secondary boton-volver">
+                <span class="boton-icon">
+                    <i class="ri-arrow-left-circle-fill"></i>
+                </span>
+                <span class="boton-text">
+                    Cancelar
+                </span>
+            </a>
+            <button
+                    type="reset"
+                    class="boton-secondary boton-warning">
+                <span class="boton-icon">
+                    <i class="ri-paint-brush-fill"></i>
+                </span>
+                <span class="boton-text">
+                    Limpiar
+                </span>
+            </button>
+            <button
+                    type="submit"
+                    class="boton-secondary boton-success">
+                <span class="boton-icon">
+                    <i class="ri-save-3-fill"></i>
+                </span>
+                <span class="boton-text">
+                    Guardar Evento
+                </span>
+            </button>
+        </div>
+    </form>
+</main>
 </body>
 </html>

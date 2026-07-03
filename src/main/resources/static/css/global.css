@@ -1,0 +1,383 @@
+:root {
+    --box-shadow-card: 0 4px 12px rgba(0, 0, 0, 0.06);
+    --box-shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    --max-width: 1024px;
+
+    --color-bg: #205E97;
+    --color-sidebar-bg: #ffffff;
+    --color-navbar-bg: #ffffff;
+    --color-main-bg: #f0f4f8;
+    --color-main-bg-alt: #f8fafc;
+    --color-main-bg-rgb: 240, 244, 248;
+    --color-main-bg-alt-rgb: 248, 250, 252;
+    --color-card-bg: #fcfcfc;
+    --color-sub-menu-bg: #f8fafc;
+    --color-sub-menu-button-bg: #f9f9f9;
+    --color-bg-transparent: rgba(0, 0, 0, 0.2);
+
+    /* === Texto y colores principales === */
+    --color-text: #342e37;
+    --color-text-soft: #342e37;
+    --color-muted: #6c757d;
+    --color-border: #e5e7eb;
+    --color-border-secondary: #342e37;
+
+    /* === Colores de acento y efectos === */
+    --color-accent: #d11e4b;
+    --color-accent-rgb: 209, 30, 75;
+    --color-accent-pastel: #ffe5e5;
+    --shadow-accent: rgba(209, 30, 75, 0.3);
+    --color-hover: #f9f9f9;
+    --color-hover-degraded: #e5e5e5;
+
+    /* === Inversos / alternativos === */
+    --color-inverse: #111111;
+    --color-normal: #ffffff;
+    --color-dark-inverse: #2b242e;
+
+    /* === Inputs === */
+    --color-input-focus-border: #1d61d0;
+    --color-input-focus-shadow: rgba(29, 97, 208, 0.3);
+    --color-input-active-border: #b2f0ff;
+
+    --color-input-bg: #ffffff;
+
+    --color-input-border: #342e37;
+    /* --color-input-border: #ced4da; */
+    --color-input-border-hover: #a8a8a8;
+    --color-input-placeholder: #6c757d;
+
+    /* === Tablas / Celdas === */
+    --color-cell-border: #e5e7eb;
+    /* === Tablas === */
+    --color-table-header-bg: #ffffff;
+    --color-table-striped-bg: #f9f9f9;
+    --color-table-hover-bg: #f1f1f1;
+
+    /* === Scrollbar === */
+    --scrollbar-track: hsl(228, 8%, 85%);
+    --scrollbar-thumb: hsl(228, 8%, 75%);
+    --scrollbar-hover: #5a5a5a;
+}
+
+.dark {
+    /* === Fondo y estructura === */
+    --color-bg: #111110;
+    --color-sidebar-bg: #181818;
+    --color-navbar-bg: #20252c;
+    --color-main-bg: #0e0e10;
+    --color-main-bg-alt: #212121;
+    --color-main-bg-rgb: 14, 14, 16;
+    --color-main-bg-alt-rgb: 33, 33, 33;
+    --color-main-degraded-bg: linear-gradient(to bottom, #0e0e10 0%, #212121 50%, #0e0e10 100%);
+    --color-card-bg: #1a1a1a;
+    --color-sub-menu-bg: #111111;
+    --color-sub-menu-button-bg: #212121;
+    --color-bg-transparent: rgba(255, 255, 255, 0.2);
+
+    /* === Texto y colores principales === */
+    --color-text: #e9e9e9;
+    --color-text-soft: rgba(233, 233, 233, 0.6);
+    --color-secondary: #bbbbbb;
+    --color-border: #212121;
+    --color-border-secondary: #aaaaaa;
+    --color-muted: #aaaaaa;
+
+    /* === Colores de acento y efectos === */
+    --color-hover: #212121;
+    --color-hover-degraded: #2a2a2a;
+
+    /* === Inversos / alternativos === */
+    --color-inverse: #eeeeee;
+    --color-normal: #111111;
+    --color-dark-inverse: #e9e9e9;
+
+    /* === Inputs === */
+    --color-input-focus-border: #4ad5b8;
+    --color-input-focus-shadow: rgba(74, 213, 184, 0.3);
+    --color-input-active-border: #4ad5b8;
+
+    --color-input-bg: #1c1918;
+    /*--color-input-bg: #e2e2e2;*/
+    --color-input-border: #444;
+    --color-input-border-hover: #666;
+    --color-input-placeholder: #aaaaaa;
+
+    /* === Tablas / Celdas === */
+    --color-cell-border: #242424;
+    /* === Tablas === */
+    --color-table-header-bg: #181818;
+    --color-table-striped-bg: #212121;
+    --color-table-hover-bg: #2a2a2a;
+    /* === Scrollbar === */
+    --scrollbar-track: #181818;
+    --scrollbar-thumb: #444;
+    --scrollbar-hover: #c1c1c1;
+}
+
+:root {
+    --radius-card: 12px;
+    --radius-active: 8px;
+    --radius-button: 8px;
+    --radius-input: 6px;
+
+    --font-primary: "Poppins", sans-serif;
+    --font-secondary: "Lexend Deca", sans-serif;
+    --font-tertiary: "Atkinson", sans-serif;
+}
+
+*::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: var(--radius-input);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-hover);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(135deg,#2563eb,#60a5fa);
+    background: var(--color-bg);
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+main {
+    scroll-behavior: smooth;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure {
+    margin: 0;
+    color: var(--color-text);
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+:root {
+    /* Títulos grandes */
+    --font-size-h1: clamp(1.5rem, 2.5vw, 2rem);
+    /* Títulos secundarios */
+    --font-size-h2: clamp(1.25rem, 0.9rem + 0.8vw, 1.5rem);
+    /* Subtítulos / paneles */
+    --font-size-h3: clamp(1.125rem, 1.7vw, 1.28rem);
+    --font-size-h4: clamp(1rem, 1.5vw, 1.125rem);
+    --font-size-h5: clamp(0.95rem, 1.3vw, 1rem);
+    --font-size-h6: clamp(0.9rem, 1.2vw, 0.95rem);
+    /* Párrafos */
+    --font-size-p: clamp(0.85rem, 1.5vw, 0.86rem);
+    /* Texto secundario (inputs, etc.) */
+    --font-size-sm: clamp(0.83rem, 1.2vw, 0.84rem);
+    /* Ayuda, tooltips */
+    --font-size-xs: clamp(0.75rem, 1vw, 0.78rem);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    font-family: "Lexend Deca", sans-serif;
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+    font-weight: lighter;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+a {
+    color: var(--color-accent);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+p {
+    font-size: var(--font-size-p);
+    font-family: "Lexend Deca", sans-serif;
+}
+
+small {
+    font-size: var(--font-size-xs);
+}
+
+textarea {
+    width: 100%;
+    font-size: var(--font-size-sm);
+}
+
+input {
+    font-size: var(--font-size-sm);
+}
+
+table {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+code {
+    padding: 2px 5px;
+    background-color: var(--color-muted);
+}
+
+pre {
+    padding: 1.5em;
+}
+
+pre > code {
+    all: unset;
+}
+
+blockquote {
+    border-left: 4px solid var(--color-accent);
+    padding: 0 0 0 20px;
+    margin: 0px;
+    font-size: var(--font-size-h4);
+}
+
+hr.nav-divider {
+    height: 1px;
+    border-color: var(--color-border);
+    width: 100%;
+}
+
+/* ==== Otros ==== */
+:root {
+    --font-primary: "Lexend Deca", sans-serif;
+    --font-secondary: "Poppins", sans-serif;
+    --shadow-material: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== Colores Estados ==== */
+:root {
+    --color-primary: #19247f;
+    --color-primary-hover: #141c66;
+    --color-primary-pastel: #e5f0ff;
+
+    --color-secondary: #403a43;
+    --color-secondary-hover: #2b242e;
+    --color-secondary-pastel: #DFDBE5;
+
+    --color-success: #009900;
+    --color-success-light: #4ad5b8;
+    --color-success-hover: #007a00;
+    --color-success-pastel: #e5f9e7;
+
+    --color-danger: #d30035;
+    --color-danger-hover: #a50029;
+    --color-danger-pastel: #ffe5e5;
+
+    --color-warning: #ffa000;
+    --color-warning-hover: #e68a00;
+    --color-warning-pastel: #fff7e0;
+
+    --color-info: #1d61d0;
+    --color-info-hover: #164da6;
+    --color-info-pastel: #e5faff;
+
+    --color-orange: #ff5722;
+    --color-orange-hover: #e64a19;
+    --color-orange-pastel: #fff0e6;
+
+    --color-purple: #3b0270;
+    --color-purple-hover: #30035a;
+    --color-purple-pastel: #f2e2ff;
+
+    --color-pink: #e83e8c;
+    --color-pink-hover: #c21c6a;
+    --color-pink-pastel: #ffe6f1;
+
+    --color-light: #f8f9fa;
+    --color-light-hover: #e9ecef;
+
+    --color-dark: #212529;
+    --color-dark-hover: #0d0f12;
+    --color-dark-pastel: #2a2d30;
+}
+
+/* ==== Colores Estados - Modo Oscuro ==== */
+.dark {
+    /* Colores pastel adaptados para modo oscuro */
+    /* Los colores pastel en dark mode son más oscuros y menos saturados */
+    /* para mantener buen contraste con el fondo oscuro */
+
+    --color-primary-pastel: #1a2447;
+
+    --color-secondary: #9d979f;
+    --color-secondary-pastel: #2a2530;
+
+    --color-success-pastel: #0d2b0d;
+    /*--color-danger-pastel: #3d1520;*/
+    --color-danger-pastel: #241616;
+    --color-warning-pastel: #3d2f0d;
+    --color-info-pastel: #1a2d47;
+    --color-orange-pastel: #3d2015;
+
+    --color-purple: #5c1d97;
+    --color-purple-pastel: #250a3d;
+
+    --color-pink-pastel: #3d1a2d;
+}

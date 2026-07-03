@@ -1,0 +1,755 @@
+
+/* ==========================================
+   COLORES DE BOTONES Y FONDOS
+   ========================================== */
+.boton-accent,
+.boton-danger,
+.boton-primary,
+.boton-secondary,
+.boton-success,
+.boton-info,
+.boton-purple,
+.boton-pink,
+.boton-orange,
+.boton-dark {
+    color: white;
+}
+
+.boton-warning {
+    color: black;
+}
+
+.boton-accent,
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.bg-dashboard {
+    background-color: var(--color-sidebar-bg);
+}
+
+.boton-secundario,
+.bg-secundario {
+    background-color: var(--color-secundario);
+}
+
+.boton-danger,
+.bg-danger {
+    background-color: var(--color-danger);
+}
+
+.bg-danger-light{
+    background-color: var(--color-danger-pastel);
+}
+
+.boton-primary,
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.boton-secondary,
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
+
+.boton-success,
+.bg-success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.boton-warning,
+.bg-warning {
+    background-color: var(--color-warning);
+    color: black;
+}
+
+.boton-danger,
+.bg-danger {
+    background-color: var(--color-danger);
+    color: white;
+}
+
+.boton-info,
+.bg-info {
+    background-color: var(--color-info);
+    border-color: var(--color-info);
+}
+
+.boton-purple,
+.bg-purple {
+    background-color: var(--color-purple);
+}
+
+.boton-pink,
+.bg-pink {
+    background-color: var(--color-pink);
+}
+
+.boton-orange,
+.bg-orange {
+    background-color: var(--color-orange);
+}
+
+.boton-light,
+.bg-light {
+    background-color: var(--color-light);
+    color: var(--color-text);
+}
+
+.boton-dark,
+.bg-dark {
+    background-color: var(--color-dark);
+}
+
+.bg-sidebar {
+    background-color: var(--color-sidebar-bg);
+    color: var(--color-text);
+}
+
+/* HOVERS SOLO PARA BOTONES */
+.boton-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.boton-secondary:hover {
+    background-color: var(--color-secondary-hover);
+}
+
+.boton-success:hover {
+    background-color: var(--color-success-hover);
+}
+
+.boton-danger:hover {
+    background-color: var(--color-danger-hover);
+}
+
+.boton-purple:hover {
+    background-color: var(--color-purple-hover);
+}
+
+.boton-pink:hover {
+    background-color: var(--color-pink-hover);
+}
+
+.boton-orange:hover {
+    background-color: var(--color-orange-hover);
+}
+
+.boton-warning:hover {
+    background-color: var(--color-warning-hover);
+    color: var(--color-text);
+    /* se mantiene legible */
+}
+
+.boton-info:hover {
+    background-color: var(--color-info-hover);
+    border-color: var(--color-info-hover);
+}
+
+.boton-light:hover {
+    background-color: var(--color-light-hover);
+    color: var(--color-text);
+}
+
+.boton-dark:hover {
+    background-color: var(--color-dark-hover);
+}
+
+.boton-modal-close {
+    background-color: var(--color-dark-inverse);
+    color: var(--color-normal);
+}
+
+.text-base {
+    color: var(--color-text);
+}
+
+.text-base-inverted {
+    color: var(--color-bw-inverted);
+}
+
+.text-soft {
+    color: var(--color-text-soft);
+}
+
+.text-accent {
+    color: var(--color-accent);
+}
+
+.text-secundario {
+    color: var(--color-secundario);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-success {
+    color: var(--color-success);
+}
+
+.text-danger {
+    color: var(--color-danger);
+}
+
+.text-warning {
+    color: var(--color-warning);
+}
+
+.text-info {
+    color: var(--color-info);
+}
+
+.text-purple {
+    color: var(--color-purple);
+}
+
+.text-orange {
+    color: var(--color-orange);
+}
+
+.text-pink {
+    color: var(--color-pink);
+}
+
+.text-black {
+    color: var(--color-bw);
+}
+
+.text-muted {
+    color: var(--color-muted);
+}
+
+.text-link {
+    color: var(--color-text-link);
+}
+
+.text-link:hover {
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-group(*) {
+    animation-duration: 0.5s;
+}
+
+::view-transition-old(root) {
+    animation: fade-out 0.3s ease-in;
+}
+
+::view-transition-new(root) {
+    animation: fade-in 0.3s ease-out;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   🟢 BADGES PROFESIONALES
+   ========================================== */
+/* ==== Variables para Badges ==== */
+:root {
+    /* Badge Accent - Color personalizado del proyecto */
+    --badge-accent-bg: #ede7f6;
+    --badge-accent-text: #3d31b2;
+    --badge-accent-border: #9575cd;
+    --badge-accent-hover-bg: #3d31b2;
+    --badge-accent-hover-text: #ffffff;
+    --badge-accent-hover-border: #5e35b1;
+
+    /* Badge Primary - Azul tradicional (más oscuro/saturado) */
+    --badge-primary-bg: #e3f2fd; /* Azul muy claro */
+    --badge-primary-text: #0d47a1; /* Azul profundo */
+    --badge-primary-border: #1976d2; /* Azul medio */
+    --badge-primary-hover-bg: #1565c0;
+    --badge-primary-hover-text: #ffffff;
+    --badge-primary-hover-border: #0d47a1;
+
+    /* Badge Info - Cian claro (más claro/vibrante) */
+    --badge-info-bg: #e0f7fa; /* Cian claro */
+    --badge-info-text: #006064; /* Cian oscuro */
+    --badge-info-border: #26c6da; /* Turquesa */
+    --badge-info-hover-bg: #00acc1;
+    --badge-info-hover-text: #ffffff;
+    --badge-info-hover-border: #006064;
+
+    /* Badge Secondary - Gris (neutral) */
+    --badge-secondary-bg: #f5f5f5;
+    --badge-secondary-text: #616161;
+    --badge-secondary-border: #bdbdbd;
+    --badge-secondary-hover-bg: #757575;
+    --badge-secondary-hover-text: #ffffff;
+    --badge-secondary-hover-border: #616161;
+
+    /* Badge Success - Verde */
+    --badge-success-bg: #e8f5e9;
+    --badge-success-text: #1b5e20;
+    --badge-success-border: #81c784;
+    --badge-success-hover-bg: #388e3c;
+    --badge-success-hover-text: #ffffff;
+    --badge-success-hover-border: #2e7d32;
+
+    /* Badge Warning - Ámbar */
+    --badge-warning-bg: #fffde7;
+    --badge-warning-text: #f57f17;
+    --badge-warning-border: #ffeb3b;
+    --badge-warning-hover-bg: #fbc02d;
+    --badge-warning-hover-text: #000000;
+    --badge-warning-hover-border: #f9a825;
+
+    /* Badge Danger - Rojo */
+    --badge-danger-bg: #ffebee;
+    --badge-danger-text: #b71c1c;
+    --badge-danger-border: #ef9a9a;
+    --badge-danger-hover-bg: #d32f2f;
+    --badge-danger-hover-text: #ffffff;
+    --badge-danger-hover-border: #c62828;
+
+    /* Badge Gray - Neutral */
+    --badge-gray-bg: #fafafa;
+    --badge-gray-text: #424242;
+    --badge-gray-border: #bdbdbd;
+    --badge-gray-hover-bg: #757575;
+    --badge-gray-hover-text: #ffffff;
+    --badge-gray-hover-border: #616161;
+
+    /* Badge Orange - Naranja */
+    --badge-orange-bg: #fff3e0;
+    --badge-orange-text: #e65100;
+    --badge-orange-border: #ffb74d;
+    --badge-orange-hover-bg: #f57c00;
+    --badge-orange-hover-text: #ffffff;
+    --badge-orange-hover-border: #ef6c00;
+
+    /* Badge Pink - Rosa */
+    --badge-pink-bg: #fce4ec;
+    --badge-pink-text: #ad1457;
+    --badge-pink-border: #f48fb1;
+    --badge-pink-hover-bg: #c2185b;
+    --badge-pink-hover-text: #ffffff;
+    --badge-pink-hover-border: #ad1457;
+
+    /* Badge Purple - Morado */
+    --badge-purple-bg: #f3e5f5;
+    --badge-purple-text: #6a1b9a;
+    --badge-purple-border: #ce93d8;
+    --badge-purple-hover-bg: #4a148c;
+    --badge-purple-hover-text: #ffffff;
+    --badge-purple-hover-border: #6a1b9a;
+}
+
+.dark {
+    /* Badge Accent - Modo Oscuro (Color personalizado rojo del tema) */
+    --badge-accent-bg: #8b0020;
+    --badge-accent-text: #ffb3c6;
+    --badge-accent-border: #d11e4b;
+    --badge-accent-hover-bg: #d11e4b;
+    --badge-accent-hover-text: #ffffff;
+    --badge-accent-hover-border: #ff547d;
+
+    /* Badge Primary - Modo Oscuro (Azul tradicional oscuro) */
+    --badge-primary-bg: #0d47a1; /* Azul profundo */
+    --badge-primary-text: #bbdefb; /* Azul claro */
+    --badge-primary-border: #1976d2;
+    --badge-primary-hover-bg: #1565c0;
+    --badge-primary-hover-text: #ffffff;
+    --badge-primary-hover-border: #1e88e5;
+
+    /* Badge Info - Modo Oscuro (Cian/Turquesa vibrante) */
+    --badge-info-bg: #004d40; /* Verde azulado */
+    --badge-info-text: #80deea; /* Cian claro */
+    --badge-info-border: #00acc1;
+    --badge-info-hover-bg: #00695c;
+    --badge-info-hover-text: #ffffff;
+    --badge-info-hover-border: #00e5ff;
+
+    /* Badge Secondary - Modo Oscuro */
+    --badge-secondary-bg: #2c2c2c;
+    --badge-secondary-text: #e0e0e0;
+    --badge-secondary-border: #505050;
+    --badge-secondary-hover-bg: #616161;
+    --badge-secondary-hover-text: #ffffff;
+    --badge-secondary-hover-border: #424242;
+
+    /* Badge Success - Modo Oscuro */
+    --badge-success-bg: #1b5e20;
+    --badge-success-text: #81c784;
+    --badge-success-border: #388e3c;
+    --badge-success-hover-bg: #2e7d32;
+    --badge-success-hover-text: #ffffff;
+    --badge-success-hover-border: #1b5e20;
+
+    /* Badge Warning - Modo Oscuro */
+    --badge-warning-bg: #ffa000;
+    --badge-warning-text: #000000;
+    --badge-warning-border: #ffca28;
+    --badge-warning-hover-bg: #ffb300;
+    --badge-warning-hover-text: #000000;
+    --badge-warning-hover-border: #ffa000;
+
+    /* Badge Danger - Modo Oscuro */
+    --badge-danger-bg: #b71c1c;
+    --badge-danger-text: #ef9a9a;
+    --badge-danger-border: #d32f2f;
+    --badge-danger-hover-bg: #c62828;
+    --badge-danger-hover-text: #ffffff;
+    --badge-danger-hover-border: #b71c1c;
+
+    /* Badge Gray - Modo Oscuro */
+    --badge-gray-bg: #2c2c2c;
+    --badge-gray-text: #bdbdbd;
+    --badge-gray-border: #505050;
+    --badge-gray-hover-bg: #616161;
+    --badge-gray-hover-text: #ffffff;
+    --badge-gray-hover-border: #424242;
+
+    /* Badge Orange - Modo Oscuro */
+    --badge-orange-bg: #bf360c;
+    --badge-orange-text: #ffcc80;
+    --badge-orange-border: #ff8a65;
+    --badge-orange-hover-bg: #e64a19;
+    --badge-orange-hover-text: #ffffff;
+    --badge-orange-hover-border: #d84315;
+
+    /* Badge Pink - Modo Oscuro */
+    --badge-pink-bg: #880e4f;
+    --badge-pink-text: #f48fb1;
+    --badge-pink-border: #c2185b;
+    --badge-pink-hover-bg: #ad1457;
+    --badge-pink-hover-text: #ffffff;
+    --badge-pink-hover-border: #880e4f;
+
+    /* Badge Purple - Modo Oscuro */
+    --badge-purple-bg: #6a1b9a;
+    --badge-purple-text: #ce93d8;
+    --badge-purple-border: #4a148c;
+    --badge-purple-hover-bg: #4a148c;
+    --badge-purple-hover-text: #ffffff;
+    --badge-purple-hover-border: #6a1b9a;
+}
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: min-content;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-size: 10px !important;
+    white-space: nowrap;
+    border: 1.5px solid transparent;
+    transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    font-family: var(--font-secondary);
+    cursor: default;
+    line-height: 1;
+    align-items: center;
+}
+
+.badge i {
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* Badge Accent - Color personalizado del proyecto */
+.badge-accent {
+    background-color: var(--badge-accent-bg);
+    color: var(--badge-accent-text);
+    border-color: var(--badge-accent-border);
+}
+.badge-accent:hover {
+    background-color: var(--badge-accent-hover-bg);
+    color: var(--badge-accent-hover-text);
+    border-color: var(--badge-accent-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(61, 49, 178, 0.3);
+}
+
+/* Badge Primary - Azul tradicional */
+.badge-primary {
+    background-color: var(--badge-primary-bg);
+}
+.badge-primary:hover {
+    background-color: var(--badge-primary-hover-bg);
+    color: var(--badge-primary-hover-text);
+    border-color: var(--badge-primary-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+/* Badge Info - Azul Profesional */
+.badge-info {
+    background-color: var(--badge-info-bg);
+}
+
+.badge-info:hover {
+    background-color: var(--badge-info-hover-bg);
+    color: var(--badge-info-hover-text);
+    border-color: var(--badge-info-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+/* Badge Secondary - Púrpura Elegante */
+.badge-secondary {
+    background-color: var(--badge-secondary-bg);
+}
+
+.badge-secondary:hover {
+    background-color: var(--badge-secondary-hover-bg);
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 0 4px 12px rgba(123, 31, 162, 0.3);
+}
+
+/* Badge Success - Verde Profesional */
+.badge-success {
+    background-color: var(--badge-success-bg);
+}
+
+.badge-success:hover {
+    background-color: var(--badge-success-hover-bg);
+    color: var(--badge-success-hover-text);
+    border-color: var(--badge-success-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 142, 60, 0.3);
+}
+
+/* Badge Warning - Ámbar Premium */
+.badge-warning {
+    background-color: var(--badge-warning-bg);
+    color: black;
+}
+
+.badge-warning:hover {
+    background-color: var(--badge-warning-hover-bg);
+    border-color: var(--badge-warning-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 140, 0, 0.3);
+}
+
+/* Badge Danger - Rojo Corporativo */
+.badge-danger {
+    background-color: var(--badge-danger-bg);
+}
+
+.badge-danger:hover {
+    background-color: var(--badge-danger-hover-bg);
+    color: var(--badge-danger-hover-text);
+    border-color: var(--badge-danger-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+/* Badge Gray - Neutral Profesional */
+.badge-gray {
+    background-color: var(--badge-gray-bg);
+}
+
+.badge-gray:hover {
+    background-color: var(--badge-gray-hover-bg);
+    color: var(--badge-gray-hover-text);
+    border-color: var(--badge-gray-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(97, 97, 97, 0.3);
+}
+
+/* Badge Orange - Naranja Vibrante */
+.badge-orange {
+    background-color: var(--badge-orange-bg);
+}
+
+.badge-orange:hover {
+    background-color: var(--badge-orange-hover-bg);
+    color: var(--badge-orange-hover-text);
+    border-color: var(--badge-orange-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(245, 124, 0, 0.3);
+}
+
+/* Badge Pink - Rosa Elegante */
+.badge-pink {
+    background-color: var(--badge-pink-bg);
+}
+
+.badge-pink:hover {
+    background-color: var(--badge-pink-hover-bg);
+    color: var(--badge-pink-hover-text);
+    border-color: var(--badge-pink-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(194, 24, 91, 0.3);
+}
+
+/* Badge Purple - Morado Profesional */
+.badge-purple {
+    background-color: var(--badge-purple-bg);
+}
+
+.badge-purple:hover {
+    background-color: var(--badge-purple-hover-bg);
+    color: var(--badge-purple-hover-text);
+    border-color: var(--badge-purple-hover-border);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 20, 140, 0.3);
+}
+
+/* Boton */
+.boton {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1;
+    font-size: var(--font-size-xs);
+    border-radius: var(--radius-input);
+    overflow: hidden;
+    padding: 0px 15px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+    height: 40px;
+}
+
+.boton[disabled],
+.boton:disabled {
+    opacity: 0.6;
+    box-shadow: none;
+}
+
+.boton .boton-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.boton .boton-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    line-height: 1;
+}
+
+.boton:hover {
+    color: var(--color-normal);
+    box-shadow: var(--shadow-material);
+}
+
+.boton:active {
+    transform: scale(0.95);
+}
+
+.boton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -250%;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: -1;
+    transition: left 0.6s ease-in-out;
+}
+
+.boton:hover::after {
+    left: -40%;
+}
+
+/* Boton secundario */
+.boton-secondary {
+    min-width: 40px;
+    min-height: 35px;
+    margin: 0px 0px;
+    border: none;
+    white-space: nowrap;
+    border-radius: var(--radius-input);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    text-decoration: none;
+    position: relative;
+    padding: 0;
+    font-size: var(--font-size-xs);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-secondary .boton-text {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    padding: 5px 50px 5px 10px;
+}
+
+.boton-secondary .boton-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    text-decoration: none;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: inherit;
+    transition: width 0.2s ease;
+}
+
+.boton-secondary .boton-icon i {
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+/* Hover */
+.boton-secondary:hover {
+    box-shadow: var(--shadow-material);
+}
+.boton-secondary:hover .boton-text {
+    color: transparent;
+}
+
+.boton-secondary:hover .boton-icon {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.boton-secondary:hover .boton-icon i {
+    transform: scale(1.1);
+}
+
+.boton-secondary:active {
+    transform: scale(0.95);
+}

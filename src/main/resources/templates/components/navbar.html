@@ -1,0 +1,26 @@
+<div th:fragment="navbar" class="navbar">
+    <div class="navbar-brand">
+        <a th:href="@{/}">
+            <i class="ri-calendar-event-fill"></i>
+            Agenda Virtual
+        </a>
+    </div>
+    <nav class="navbar-nav">
+        <a th:href="@{/dashboard}" class="nav-link">
+            <i class="ri-dashboard-horizontal-line"></i>
+            Dashboard
+        </a>
+        <a th:href="@{/contactos}" class="nav-link">
+            <i class="ri-contacts-book-3-line"></i>
+            Contactos
+        </a>
+        <a th:href="@{/eventos}" class="nav-link">
+            <i class="ri-calendar-event-line"></i>
+            Eventos
+        </a>
+    </nav>
+    <a th:href="@{/login}" class="boton boton-danger">
+        <i class="ri-logout-box-r-fill"></i>
+        Salir
+    </a>
+</div>
